@@ -6,6 +6,8 @@
 			<li><NuxtLink to="/product/1">product/1</NuxtLink></li>
 			<li><NuxtLink to="/product/2">product/2</NuxtLink></li>
 			<li><NuxtLink to="/product/3">product/3</NuxtLink></li>
+			<li><NuxtLink to="/content">md content</NuxtLink></li>
+			<li><NuxtLink to="/content/about">md content/about</NuxtLink></li>
 			<li><NuxtLink to="/login">login</NuxtLink></li>
 			<li><NuxtLink to="/protected">protected</NuxtLink></li>
 		</ul>
