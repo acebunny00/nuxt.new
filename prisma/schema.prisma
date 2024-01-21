@@ -1,0 +1,140 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int      @id @default(autoincrement())
+  email    String   @unique
+  name     String?
+  jobTitle String?
+  posts    Post[]
+  profile  Profile?
+}
+
+model Profile {
+  id     Int    @id @default(autoincrement())
+  bio    String // Intentional typo!
+  userId Int    @unique
+  user   User   @relation(fields: [userId], references: [id])
+}
+
+model Post {
+  id          Int        @id @default(autoincrement())
+  title       String
+  description String?
+  published   Boolean    @default(false)
+  content     String?
+  authorId    Int
+  author      User       @relation(fields: [authorId], references: [id])
+  categories  Category[]
+  tags        Tag[]
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime?
+}
+
+model Category {
+  id    Int    @id @default(autoincrement())
+  name  String
+  posts Post[]
+
+  @@unique([name])
+}
+
+model Tag {
+  id    Int    @id @default(autoincrement())
+  name  String
+  posts Post[]
+}
+
+// model User {
+//   id           Int              @id @default(autoincrement())
+//   name         String
+//   email        String           @unique // `email` can not be optional because it's the only unique field on the model
+//   profileViews Int              @default(0)
+//   // role           Role             @default(USER)
+//   // coinflips      Boolean[]
+//   posts        Post[]
+//   city         String
+//   country      String
+//   profile      ExtendedProfile?
+//   // pets           Json
+//   token_cuid   String           @unique @default(cuid())
+//   token_uuid   String           @unique @default(uuid())
+//   isAdmin      Boolean          @default(false)
+//   firstName    String
+//   lastName     String
+//   // favoriteColors String[]         @default(["red", "blue", "green", "yellow", "purple"])
+//   // role         Role     @default(USER)
+//   // role         Role[]   @default([USER, DEVELOPER])
+//   data         DateTime         @default("2020-03-19T14:21:00+02:00")
+//   secret       Bytes            @default("SGVsbG8gd29ybGQ=")
+//   number       Float            @default(1.1) @ignore // this field will be excluded
+//   Profile      Profile[]
+
+//   // @@id([firstName, lastName, isAdmin])
+//   @@unique(fields: [firstName, lastName, isAdmin], name: "admin_identifier")
+// }
+
+// model ExtendedProfile {
+//   id     Int     @id @default(autoincrement())
+//   userId Int?    @unique
+//   bio    String?
+//   User   User?   @relation(fields: [userId], references: [id])
+// }
+
+// model Post {
+//   id        Int      @id @default(autoincrement())
+//   // @@id([authorId, title])
+//   title     String
+//   published Boolean  @default(false)
+//   author    User     @relation(fields: [authorId], references: [id])
+//   authorId  Int
+//   // comments  Json
+//   views     Int      @default(0)
+//   likes     Int      @default(0)
+//   content   String
+//   updatedAt DateTime @updatedAt
+// }
+
+// model Profile {
+//   authorId Int    @id
+//   author   User   @relation(fields: [authorId], references: [id])
+//   bio      String
+// }
+
+// model Star {
+//   id       Int                    @id @default(autoincrement())
+//   position Unsupported("circle")?
+//   example1 Unsupported("circle")
+//   circle   Unsupported("circle")? @default(dbgenerated("'<(10,4),11>'::circle"))
+// }
+
+// enum Role {
+//   USER
+//   DEVELOPER
+//   ADMIN
+// }
+
+// model Model {
+//   myField String @db.Bit(1)
+// }
+
+// model Product {
+// id     String  @id @default(auto()) @map("_id") @db.ObjectId
+// name   String
+// photos Photo[]
+// }
+
+// type Photo {
+//   height Int
+//   width  Int
+//   url    String
+// }
