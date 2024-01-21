@@ -1,4 +1,7 @@
-<template></template>
+<template>
+	<DemoVueUseCore />
+	<DemoVueUseComponents />
+</template>
 
 <script setup></script>
 
