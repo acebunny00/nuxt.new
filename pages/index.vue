@@ -1,4 +1,6 @@
-<template></template>
+<template>
+	<DemoColorMode />
+</template>
 
 <script setup></script>
 

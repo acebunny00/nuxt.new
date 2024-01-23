@@ -8,4 +8,8 @@ export default defineNuxtConfig({
 			enabled: true,
 		},
 	},
+	modules: [
+		//
+		"@nuxtjs/color-mode",
+	],
 });
