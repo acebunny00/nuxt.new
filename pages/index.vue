@@ -1,4 +1,6 @@
-<template></template>
+<template>
+	<DemoNuxtUI />
+</template>
 
 <script setup></script>
 
