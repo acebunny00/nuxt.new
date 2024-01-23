@@ -1,4 +1,6 @@
-<template></template>
+<template>
+	<DemoVuetify />
+</template>
 
 <script setup></script>
 
