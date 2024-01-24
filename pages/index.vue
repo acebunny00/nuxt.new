@@ -1,4 +1,6 @@
-<template></template>
+<template>
+	<DemoAnimate />
+</template>
 
 <script setup></script>
 
