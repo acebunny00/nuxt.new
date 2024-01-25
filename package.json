@@ -1,17 +1,26 @@
 {
-  "name": "nuxt-app",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "nuxt": "^3.9.3",
-    "vue": "^3.4.14",
-    "vue-router": "^4.2.5"
-  }
+	"private": true,
+	"scripts": {
+		"build & preview": "npx nuxi build && npx nuxi preview",
+		"cleanup": "npx nuxi cleanup",
+		"dev open": "npx nuxi dev -o --host",
+		"prisma delete": "rd /s /q prisma\\migrations && del /f /q /a prisma\\db.sqlite*",
+		"prisma migrate": "npx prisma migrate dev --name init",
+		"prisma generate": "npx prisma generate",
+		"prisma db pull": "npx prisma db pull",
+		"prisma db push": "npx prisma db push",
+		"prisma seed": "npx prisma db seed",
+		"prisma studio": "npx prisma studio",
+		"cleanup & delete": "npx nuxi cleanup && rd /s /q node_modules",
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"devDependencies": {
+		"nuxt": "^3.9.3",
+		"vue": "^3.4.14",
+		"vue-router": "^4.2.5"
+	}
 }
