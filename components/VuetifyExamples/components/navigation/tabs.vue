@@ -1,0 +1,33 @@
+<template>
+	<h2><a href="https://vuetifyjs.com/en/components/tabs">tabs</a></h2>
+	<VuetifyExamplesSnippetsTabs1 />
+	<hr />
+	<VuetifyExamplesSnippetsTabs2 />
+	<hr />
+	<VuetifyExamplesSnippetsTabs3 />
+	<hr />
+	<VuetifyExamplesSnippetsTabs4 />
+	<hr />
+	<VuetifyExamplesSnippetsTabs5 />
+	<hr />
+	<VuetifyExamplesSnippetsTabs6 />
+	<hr />
+	<VuetifyExamplesSnippetsTabs7 />
+	<hr />
+	<VuetifyExamplesSnippetsTabs8 />
+	<hr />
+	<VuetifyExamplesSnippetsTabs9 />
+	<hr />
+	<VuetifyExamplesSnippetsTabs10 />
+	<hr />
+	<VuetifyExamplesSnippetsTabs11 />
+	<hr />
+	<VuetifyExamplesSnippetsTabs12 />
+	<hr />
+	<VuetifyExamplesSnippetsTabs13 />
+	<hr />
+	<VuetifyExamplesSnippetsTabs14 />
+	<hr />
+	<VuetifyExamplesSnippetsTabs15 />
+	<hr />
+</template>

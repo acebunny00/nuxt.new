@@ -1,0 +1,31 @@
+<template>
+	<h2><a href="https://vuetifyjs.com/en/components/lists">lists</a></h2>
+	<VuetifyExamplesSnippetsLists1 />
+	<hr />
+	<VuetifyExamplesSnippetsLists2 />
+	<hr />
+	<VuetifyExamplesSnippetsLists3 />
+	<hr />
+	<VuetifyExamplesSnippetsLists4 />
+	<hr />
+	<VuetifyExamplesSnippetsLists5 />
+	<hr />
+	<VuetifyExamplesSnippetsLists6 />
+	<hr />
+	<VuetifyExamplesSnippetsLists7 />
+	<hr />
+	<VuetifyExamplesSnippetsLists8 />
+	<hr />
+	<VuetifyExamplesSnippetsLists9 />
+	<hr />
+	<VuetifyExamplesSnippetsLists10 />
+	<hr />
+	<VuetifyExamplesSnippetsLists11 />
+	<hr />
+	<VuetifyExamplesSnippetsLists12 />
+	<hr />
+	<VuetifyExamplesSnippetsLists13 />
+	<hr />
+	<VuetifyExamplesSnippetsLists14 />
+	<hr />
+</template>

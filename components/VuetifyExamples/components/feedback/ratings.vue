@@ -1,0 +1,33 @@
+<template>
+	<h2><a href="https://vuetifyjs.com/en/components/ratings">ratings</a></h2>
+	<VuetifyExamplesSnippetsRatings1 />
+	<hr />
+	<VuetifyExamplesSnippetsRatings2 />
+	<hr />
+	<VuetifyExamplesSnippetsRatings3 />
+	<hr />
+	<VuetifyExamplesSnippetsRatings4 />
+	<hr />
+	<VuetifyExamplesSnippetsRatings5 />
+	<hr />
+	<VuetifyExamplesSnippetsRatings6 />
+	<hr />
+	<VuetifyExamplesSnippetsRatings7 />
+	<hr />
+	<VuetifyExamplesSnippetsRatings8 />
+	<hr />
+	<VuetifyExamplesSnippetsRatings9 />
+	<hr />
+	<VuetifyExamplesSnippetsRatings10 />
+	<hr />
+	<VuetifyExamplesSnippetsRatings11 />
+	<hr />
+	<VuetifyExamplesSnippetsRatings12 />
+	<hr />
+	<VuetifyExamplesSnippetsRatings13 />
+	<hr />
+	<VuetifyExamplesSnippetsRatings14 />
+	<hr />
+	<VuetifyExamplesSnippetsRatings15 />
+	<hr />
+</template>

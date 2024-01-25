@@ -1,0 +1,29 @@
+<template>
+	<h2><a href="https://vuetifyjs.com/en/components/chips">chips</a></h2>
+	<VuetifyExamplesSnippetsChips1 />
+	<hr />
+	<VuetifyExamplesSnippetsChips2 />
+	<hr />
+	<VuetifyExamplesSnippetsChips3 />
+	<hr />
+	<VuetifyExamplesSnippetsChips4 />
+	<hr />
+	<VuetifyExamplesSnippetsChips5 />
+	<hr />
+	<VuetifyExamplesSnippetsChips6 />
+	<hr />
+	<VuetifyExamplesSnippetsChips7 />
+	<hr />
+	<VuetifyExamplesSnippetsChips8 />
+	<hr />
+	<VuetifyExamplesSnippetsChips9 />
+	<hr />
+	<VuetifyExamplesSnippetsChips10 />
+	<hr />
+	<VuetifyExamplesSnippetsChips11 />
+	<hr />
+	<VuetifyExamplesSnippetsChips12 />
+	<hr />
+	<VuetifyExamplesSnippetsChips13 />
+	<hr />
+</template>

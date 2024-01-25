@@ -1,0 +1,20 @@
+<template>
+	<div>
+		<v-select :items="items" density="compact" label="Compact"></v-select>
+
+		<v-select
+			:items="items"
+			density="comfortable"
+			label="Comfortable"
+		></v-select>
+
+		<v-select :items="items" label="Default"></v-select>
+	</div>
+</template>
+<script>
+	export default {
+		data: () => ({
+			items: ["Foo", "Bar", "Fizz", "Buzz"],
+		}),
+	};
+</script>
