@@ -8,4 +8,7 @@ export default defineNuxtConfig({
 			enabled: true,
 		},
 	},
+	modules: [
+		//
+		"@sidebase/nuxt-auth"],
 });
