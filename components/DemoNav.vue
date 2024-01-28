@@ -1,4 +1,12 @@
 <template>
+	<div class="right">
+		<div v-if="status === 'authenticated'">Logged in as "{{ data?.user?.name }}"</div>
+		<div v-else>Not logged in</div>
+		<div class="right">
+			<button v-if="status !== 'authenticated'" @click="signIn">Sign in</button>
+			<button v-else @click="signOut">Sign out</button>
+		</div>
+	</div>
 	<nav>
 		<ul>
 			<li><NuxtLink to="/">index</NuxtLink></li>
@@ -15,6 +23,7 @@
 </template>
 
 <script setup>
+	const { status, data, signIn, signOut } = useAuth();
 	const route = useRoute();
 </script>
 

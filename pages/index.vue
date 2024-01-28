@@ -1,5 +1,9 @@
-<template></template>
+<template>index</template>
 
-<script setup></script>
+<script setup>
+	definePageMeta({
+		auth: false,
+	});
+</script>
 
 <style></style>
