@@ -1,20 +1,18 @@
 <template>
-	<div class="right">
-		<v-switch value="light" label="Dark mode" @click="toggleTheme" />
-	</div>
-	<nav>
-		<ul>
-			<li><NuxtLink to="/">index</NuxtLink></li>
-			<li><NuxtLink to="/product">product</NuxtLink></li>
-			<li><NuxtLink to="/product/1">product/1</NuxtLink></li>
-			<li><NuxtLink to="/product/2">product/2</NuxtLink></li>
-			<li><NuxtLink to="/product/3">product/3</NuxtLink></li>
-			<li><NuxtLink to="/login">login</NuxtLink></li>
-			<li><NuxtLink to="/protected">protected</NuxtLink></li>
-		</ul>
-	</nav>
+	<v-navigation-drawer rail permanent location="right" style="position: fixed">
+		<v-switch true-icon="mdi-white-balance-sunny" false-icon="mdi-weather-night" @click="toggleTheme" />
+		<v-divider />
+		<v-list>
+			<v-list-item prepend-icon="mdi-store" to="/"></v-list-item>
+			<v-list-item prepend-icon="mdi-list-box-outline" to="/product"></v-list-item>
+			<v-list-item prepend-icon="mdi-list-status" to="/product/1"></v-list-item>
+			<v-list-item prepend-icon="mdi-list-status" to="/product/2"></v-list-item>
+			<v-list-item prepend-icon="mdi-list-status" to="/product/3"></v-list-item>
+			<v-list-item prepend-icon="mdi-login" to="/login"></v-list-item>
+			<v-list-item prepend-icon="mdi-security" to="/protected"></v-list-item>
+		</v-list>
+	</v-navigation-drawer>
 	<p>Current route: {{ route.path }}</p>
-	<hr />
 </template>
 
 <script setup>
@@ -26,20 +24,13 @@
 	}
 </script>
 
-<style scoped>
-	.right {
-		float: right;
+<style>
+	::-webkit-scrollbar {
+		width: 0; /* Remove scrollbar space */
+		background: transparent; /* Optional: just make scrollbar invisible */
 	}
-	nav {
-		box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
-		background-color: #eee;
-		display: flow-root;
-	}
-	ul {
-		list-style: none;
-	}
-	li {
-		float: left;
-		margin-right: 20px;
+	/* Optional: show position indicator in red */
+	::-webkit-scrollbar-thumb {
+		background: #ff0000;
 	}
 </style>
