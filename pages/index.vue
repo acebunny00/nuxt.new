@@ -1,4 +1,6 @@
-<template></template>
+<template>
+	<DemoPrisma />
+</template>
 
 <script setup></script>
 
