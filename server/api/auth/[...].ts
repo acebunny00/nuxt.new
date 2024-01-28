@@ -1,6 +1,8 @@
 import { NuxtAuthHandler } from "#auth";
+import { PrismaClient } from "@prisma/client";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GithubProvider from "next-auth/providers/github";
+const prisma = new PrismaClient();
 
 export default NuxtAuthHandler({
 	// TODO: SET A STRONG SECRET, SEE https://sidebase.io/nuxt-auth/configuration/nuxt-auth-handler#secret
@@ -24,14 +26,16 @@ export default NuxtAuthHandler({
 				username: { label: "Username", type: "text", placeholder: "(hint: jsmith)" },
 				password: { label: "Password", type: "password", placeholder: "(hint: hunter2)" },
 			},
-			authorize(credentials: any) {
+			async authorize(credentials: any) {
 				console.warn("ATTENTION: You should replace this with your real providers or credential provider logic! The current setup is not safe");
 				// You need to provide your own logic here that takes the credentials
 				// submitted and returns either a object representing a user or value
 				// that is false/null if the credentials are invalid.
 				// NOTE: THE BELOW LOGIC IS NOT SAFE OR PROPER FOR AUTHENTICATION!
 
-				const user = { id: "1", name: "J Smith", username: "jsmith", password: "hunter2" };
+				// const user = [{ id: "1", name: "J Smith", username: "jsmith", password: "hunter2" }];
+				// const user = (await prisma.example.findMany())[0];
+				const user = (await prisma.$queryRaw`select * from user where username=${credentials.username} and password=${credentials.password}`)[0];
 
 				if (credentials?.username === user.username && credentials?.password === user.password) {
 					// Any object returned will be saved in `user` property of the JWT

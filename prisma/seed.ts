@@ -11,6 +11,14 @@ async function main() {
 		data: { details: "eloise" },
 	});
 	console.log({ alice, bob, Eloise });
+
+	const jsmith = await prisma.user.create({
+		data: { name: "J Smith", username: "jsmith", email: "jsmith@sidebase.io", password: "hunter2" },
+	});
+	const bernd = await prisma.user.create({
+		data: { name: "Bernd", username: "bernd", email: "bernd@sidebase.io", password: "hunter2" },
+	});
+	console.log({ jsmith, bernd });
 }
 main()
 	.then(async () => {
