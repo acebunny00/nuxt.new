@@ -22,5 +22,9 @@
 		"nuxt": "^3.9.3",
 		"vue": "^3.4.14",
 		"vue-router": "^4.2.5"
+	},
+	"dependencies": {
+		"@popperjs/core": "^2.11.8",
+		"v-calendar": "^3.1.2"
 	}
 }

@@ -1,4 +1,6 @@
-<template></template>
+<template>
+	<DemoCalendar />
+</template>
 
 <script setup></script>
 
