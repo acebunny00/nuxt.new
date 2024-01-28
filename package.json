@@ -18,13 +18,23 @@
 		"preview": "nuxt preview",
 		"postinstall": "nuxt prepare"
 	},
+	"prisma": {
+		"seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+	},
 	"peerDependencies": {
 		"next-auth": "4.21.1"
 	},
 	"devDependencies": {
 		"@sidebase/nuxt-auth": "^0.6.4",
+		"@types/node": "^20.11.5",
 		"nuxt": "^3.9.3",
+		"prisma": "^5.8.1",
+		"ts-node": "^10.9.2",
+		"typescript": "5.3.3",
 		"vue": "^3.4.14",
 		"vue-router": "^4.2.5"
+	},
+	"dependencies": {
+		"@prisma/client": "^5.8.1"
 	}
 }

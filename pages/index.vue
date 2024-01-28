@@ -1,9 +1,11 @@
-<template>index</template>
+<template>
+	<DemoPrisma />
+</template>
 
 <script setup>
-	definePageMeta({
-		auth: false,
-	});
+definePageMeta({
+	auth: false,
+});
 </script>
 
 <style></style>
