@@ -1,4 +1,7 @@
 <template>
+	<div class="right">
+		<v-switch value="light" label="Dark mode" @click="toggleTheme" />
+	</div>
 	<nav>
 		<ul>
 			<li><NuxtLink to="/">index</NuxtLink></li>
@@ -15,7 +18,12 @@
 </template>
 
 <script setup>
+	import { useTheme } from "vuetify";
 	const route = useRoute();
+	const theme = useTheme();
+	function toggleTheme() {
+		theme.global.name.value = theme.global.current.value.dark ? "light" : "dark";
+	}
 </script>
 
 <style scoped>
