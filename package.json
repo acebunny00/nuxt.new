@@ -1,7 +1,9 @@
 {
 	"private": true,
 	"scripts": {
-		"build & preview": "npx nuxi build && npx nuxi preview",
+		"build": "nuxt build",
+		"pm2 start": "npx pm2 start",
+		"pm2 stop": "npx pm2 stop all",
 		"cleanup": "npx nuxi cleanup",
 		"dev open": "npx nuxi dev -o --host",
 		"prisma delete": "rd /s /q prisma\\migrations && del /f /q /a prisma\\db.sqlite*",
@@ -12,7 +14,9 @@
 		"prisma seed": "npx prisma db seed",
 		"prisma studio": "npx prisma studio",
 		"cleanup & delete": "npx nuxi cleanup && rd /s /q node_modules",
-		"build": "nuxt build",
+		"pm2 restart": "npx pm2 restart all",
+		"pm2 logs": "npx pm2 logs",
+		"pm2 delete": "npx pm2 delete all",
 		"dev": "nuxt dev",
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
@@ -22,5 +26,8 @@
 		"nuxt": "^3.9.3",
 		"vue": "^3.4.14",
 		"vue-router": "^4.2.5"
+	},
+	"dependencies": {
+		"pm2": "^5.3.1"
 	}
 }
