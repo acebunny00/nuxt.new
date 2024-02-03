@@ -1,24 +1,36 @@
 {
 	"name": "nuxt-app",
 	"private": true,
-	"type": "module",
+	"type": "commonjs",
 	"scripts": {
 		"server": "pnpm i && prisma generate && nuxt build && nuxt preview",
 		"dev": "nuxt dev -o --host",
 		"build": "nuxt build",
 		"preview": "nuxt preview",
 		"prisma": "prisma generate",
+		"prisma:migrate": "prisma migrate dev --name init",
+		"prisma:delete": "rm prisma/db.sqlite* && rd /s /q prisma\\migrations",
+		"prisma:init": "prisma init",
+		"prisma:seed": "prisma db seed",
+		"prisma:pull": "prisma db pull",
+		"prisma:push": "prisma db push",
 		"prisma:studio": "prisma studio",
 		"cleanup": "nuxt cleanup",
 		"delete:node_modules": "rd /s /q node_modules"
+	},
+	"prisma": {
+		"seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
 	},
 	"dependencies": {
 		"@prisma/client": "^5.9.0",
 		"h3": "^1.10.1"
 	},
 	"devDependencies": {
+		"@types/node": "^20.11.13",
 		"nuxt": "^3.10.0",
 		"prisma": "^5.9.0",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.3.3",
 		"vue": "^3.4.15",
 		"vue-router": "^4.2.5"
 	}

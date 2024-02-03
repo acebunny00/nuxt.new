@@ -1,4 +1,10 @@
 {
 	// https://nuxt.com/docs/guide/concepts/typescript
-	"extends": "./.nuxt/tsconfig.json"
+	// "extends": "./.nuxt/tsconfig.json"
+	//
+	// Generate 되는 파일에 다음 옵션 두개로 인해 seed 처리 불가능
+	// "compilerOptions": {
+	// 	"types": [],
+	// 	"verbatimModuleSyntax": true
+	// }
 }
