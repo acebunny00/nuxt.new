@@ -12,8 +12,13 @@
 		"cleanup": "nuxt cleanup",
 		"delete:node_modules": "rd /s /q node_modules"
 	},
+	"dependencies": {
+		"@prisma/client": "^5.9.0",
+		"h3": "^1.10.1"
+	},
 	"devDependencies": {
 		"nuxt": "^3.10.0",
+		"prisma": "^5.9.0",
 		"vue": "^3.4.15",
 		"vue-router": "^4.2.5"
 	}
