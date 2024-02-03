@@ -1,5 +1,7 @@
 <template></template>
+
 <script setup>
+	definePageMeta({ auth: false });
 	const config = useRuntimeConfig();
 	useHead({
 		htmlAttrs: { lang: config.public.htmlAttrs_lang },

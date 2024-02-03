@@ -1,6 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+	auth: {
+		provider: {
+			type: "authjs",
+		},
+	},
 	devtools: { enabled: true, timeline: { enabled: true } },
+	modules: [
+		//
+		"@sidebase/nuxt-auth",
+	],
 	runtimeConfig: {
 		public: {
 			title: process.env.SEO_title,
