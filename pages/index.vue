@@ -1,4 +1,6 @@
-<template></template>
+<template>
+	<VuetifySetup />
+</template>
 <script setup>
 	const config = useRuntimeConfig();
 	useHead({
