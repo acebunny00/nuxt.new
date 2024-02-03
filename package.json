@@ -3,11 +3,14 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
+		"server": "pnpm i && prisma generate && nuxt build && nuxt preview",
+		"dev": "nuxt dev -o --host",
 		"build": "nuxt build",
-		"dev": "nuxt dev",
-		"generate": "nuxt generate",
 		"preview": "nuxt preview",
-		"postinstall": "nuxt prepare"
+		"prisma": "prisma generate",
+		"prisma:studio": "prisma studio",
+		"cleanup": "nuxt cleanup",
+		"delete:node_modules": "rd /s /q node_modules"
 	},
 	"devDependencies": {
 		"nuxt": "^3.10.0",
