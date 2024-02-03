@@ -1,4 +1,6 @@
-<template></template>
+<template>
+	<PrismaExample />
+</template>
 <script setup>
 	const config = useRuntimeConfig();
 	useHead({
