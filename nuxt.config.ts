@@ -1,5 +1,17 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+	app: {
+		head: {
+			charset: "utf-8",
+			link: [
+				//
+				{ rel: "preconnect", href: "https://fonts.googleapis.com" },
+				{ rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Roboto&display=swap", crossorigin: "" },
+				{ rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" },
+			],
+		},
+	},
+	css: ["./assets/common.css"],
 	devtools: { enabled: true, timeline: { enabled: true } },
 	runtimeConfig: {
 		public: {

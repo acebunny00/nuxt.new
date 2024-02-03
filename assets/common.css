@@ -1,0 +1,10 @@
+.arrange-right {
+	float: right;
+}
+
+.sticky-header {
+	position: sticky;
+	z-index: 100;
+	border: 0;
+	height: 70;
+}
