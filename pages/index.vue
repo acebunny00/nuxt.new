@@ -2,6 +2,17 @@
 	<VuetifySetup />
 </template>
 <script setup>
+	definePageMeta({
+		layout: "baseline",
+		layout: "constrained",
+		layout: "discord",
+		layout: "extended-toolbar",
+		layout: "inbox",
+		layout: "side-navigation",
+		layout: "steam",
+		layout: "system-bar",
+		layout: "three-column",
+	});
 	const config = useRuntimeConfig();
 	useHead({
 		htmlAttrs: { lang: config.public.htmlAttrs_lang },
